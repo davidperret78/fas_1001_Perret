@@ -1,0 +1,27 @@
+---
+title: "TP1_FAS1001"
+format: pdf
+editor: visual
+autor: David Perret
+YAML: 22 Janvier 2024
+---
+
+## Explications des commandes
+
+-   Création de la branche
+
+![](images/screen git branch.png){width="925"}
+
+Dans cette capture d'écran nous aperçevons différentes commandes que nous avons effectué. La première est "cd". Elle nous a permis de nous situer dans notre Terminal ainsi que d'avancer de document en document. La commande suivante, "git branche" nous a servi à créer une branche au sein de notre ordinateur, à ne pas confondre avec clone. Enfin, la commande git checkout nous a permis de changer de branche et de passer à celle que nous avons créer plus haut.
+
+-   Utilisation de la commande push
+
+![](images/screen git push.png)
+
+Cette commande permet de créer la branche sur la plateforme github, et d'y envoyer toutes les modifications.
+
+-   Utilisation de la commande add et commit
+
+![](images/screen add.png)
+
+Nous utilisons la commande git add . pour ajouter les modifications qui ont été faites, git commit pour donner un nom à cette opération, et git push pour transférer cette opération directement sur github.
