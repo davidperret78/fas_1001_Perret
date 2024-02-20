@@ -1,0 +1,41 @@
+---
+title: "TP3_FAS1001_David_Perret"
+format: html
+editor: visual
+---
+
+## TP3 - David Perret 
+
+## 
+
+## Intro
+
+Pour ce devoir j'ai utilisé des données du parlement Canadien provenant de LIPAD. J'ai souhaité comparer les divers enjeux discutés par les partis politiques au fil des années. Pour cela j'ai utilisé des données de 2008 et de 2018.
+
+## Nettoyage des bases de données
+
+Afin de pouvoir utiliser les données comme je le voulais, j'ai du d'abord nettoyer chacune des bases. Cette étape a principalement consisté à supprimer une majorité des variables qui étaient présentes dans les données textuelles pour garder les variables speechtext et speakerparty.
+
+Une fois cette étape fini, j'ai pu utiliser le dictionnaire lexicoder_fr, afin d'analyser les différents speech présent dans chacune des bases de données. Les différentes catégories analysées sont l'économie, la défense, le crime ainsi que l'assurance maladie.
+
+Voici les différents résultats que j'ai pu tirer des données :
+
+### [Graphique pour les données de 2008 :]{.underline}
+
+![](Graphique 2 TP3 2008.png){width="599"}
+
+### [Graphique pour les données de 2018 :]{.underline}
+
+![](Graphique TP3 données 2018.png)
+
+### Interprétation : 
+
+Tout d'abord, on peut remarquer que la tendance générale est relativement similaire.
+
+Un point que je trouve assez marquant est qu'en 2008, dans un contexte de crise économique, les partis politiques canadien discutaient assez peu d'économie, du moins, pas autant qu'en 2018 alors que le contexte économique n'est pas le même.
+
+On peut aussi remarquer que la criminalité est le sujet favori des politiques au Canada, tout partis confondu, même si l'on remarque que le Bloc Québécois est bien devant en 2018, en terme de proportion. Venant d'un étranger (moi), je trouve cela assez étonnant de la part du Canada, étant donné que ce n'est pas un pays connu pour son haut taux de criminalité, ni pour sa prise de position dans des conflits internationaux.
+
+Enfin, on peut aussi noter qu'en 2008, le bloc québécois était présent sur différents sujets, tel que l'économie, la défense et le crime, alors qu'en 2018, le graphique nous montre que le parti se distingue par sa forte participation au débat concernant les crimes, et seulement le crime. En effet le parti semble absent des autres sujets politiques.
+
+Toutefois, ces graphiques montrent assez bien la différence de gouvernement entre celui de Harper en 2008, plus conservateur, et celui de Trudeau en 2018, bien plus libéral.
