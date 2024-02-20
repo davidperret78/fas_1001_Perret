@@ -1,0 +1,41 @@
+---
+title: "TP2_FAS1001_David_Perret"
+author: "David Perret"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(readr)
+donnee1 <- read_csv("CSES (5).csv")
+donnee2 <- read_csv("quality_governance (5).csv")
+
+data_merged <- merge(donnee1,donnee2, by = "pays", all = TRUE)
+data_merged_final <- data_merged %>% select(pays, part_electorale, perc_corruption, education, perf_gov, pib_habitant, pop_rural)
+
+data_merged_final <- filter(
+  data_merged_final, pays %in% c("Austria","Germany","Greece","Hungary","Italy","Ireland","Montenegro","Lithuania")
+  )
+
+
+model <- data_merged_final %>% 
+   lm(part_electorale ~ perc_corruption + education + perf_gov + pib_habitant + pop_rural + pays, data = .)
+
+```
+
+Afin de mener à bien ma recherche, j'ai décidé de fusionner la base de donnée CSES, issue de Comparative Study of Electoral Systems, le module 5, ainsi que la base de donnée quality of governance.
+
+La problématique de ma recherche est dans quelle mesure est ce que la perception de la corruption impacte la participation électorale.
+
+Dans la partie de code ci-dessus, j'ai nettoyé le code que j'ai effectué pour fusionner ainsi que nettoyer/filtrer la base de donnée.
+
+J'ai sélectionné les variables que je trouvais pertinente, même si je pense qu'il y a quelques réglages à faire...
+
+J'ai réussi à tirer un tableau avec les résultats de ma régression linéaire multiple.
+
+![](images/Screenshot 2024-02-05 at 23.23.33.png)
+
+J'ai eu du mal à créer un graphique de manière à mettre en avant le résultat attendu, ainsi que l'interprétation que je souhaitais y apporter, mais voici tout de même ce que j'ai pu faire :
+
+![](Graphique TP2.png)

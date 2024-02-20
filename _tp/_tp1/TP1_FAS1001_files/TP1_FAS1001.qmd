@@ -28,6 +28,6 @@ Nous utilisons la commande git add . pour ajouter les modifications qui ont √©t√
 
 -   Utilisation du git log
 
-![](screenshot%20pour%20Quarto/screen%20git%20log.png)
+![](screenshot pour Quarto/screen git log.png)
 
 La commande git log permet d'obtenir l'historique de nos commits.
