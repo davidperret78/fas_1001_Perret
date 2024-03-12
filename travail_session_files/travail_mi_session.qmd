@@ -1,0 +1,123 @@
+---
+title: "travail mi session FAS1001 David Perret"
+format: html
+editor: visual
+---
+
+## [Introduction]{.underline}
+
+Suite au scandale auquel les États-Unis ont fait face en 2020 avec les élections présidentielles, la corruption est revenue au devant de la scène avec les accusations que M.Trump portait sur les différentes institutions américaines. Sachant que les prochaines élections américaines arrivent à grand pas avec sans doute un nouvel affrontement entre Mr Trump et Mr Biden, je me suis posé la question de l\'impact que pourrait avoir la corruption sur la motivation que pourrait avoir la population à voter.
+
+On sait que la corruption est un indicateur difficile à calculer en raison de son absence de données officielles. Cependant, des organisations mondiales, comme *Transparency International*, tentent d\'estimer ce qu\'on appelle la perception de la corruption en publiant des données annuelles. J'ai donc ici un moyen de pouvoir traiter cette question malgré cette difficulté rencontrée.
+
+Ma recherche portera sur le sujet suivant : ***Quel est l'impact de la perception de la corruption sur la participation électorale en Europe?***
+
+## [Revue litéraire]{.underline}
+
+Le lien entre la perception de la corruption et la participation électorale est un sujet sur lequel peu d'études ont été réalisées, pour la plupart elles portent sur un pays ou une région donnée. Au travers des différentes études qui ont été menées, deux points de vue se démarquent. Le premier selon lequel la corruption a un impact positif sur la participation électorale et le second, le plus populaire, que la corruption a un effet négatif sur le vote.
+
+Premièrement, en offrant des pots-de-vin, les candidats peuvent gagner des électeurs, cela revient à dire que les électeurs ont été acheté pour aller voter, comme cela a pu être le cas aux Etats-Unis (*Kaharan*, 2006).
+
+Deuxièmement, d'une nature différente, les individus souhaiteraient avoir un gouvernement honnête et responsable, par conséquent le vote est pour eux une chance de punir ces candidats qui ont pu être corrompu. Cela a pu être le cas dans certains pays africains (*Inman, K., & Andrews, J. T.* 2009), ainsi qu\'en Espagne lors des élections municipales et régionales de 2007 et 2011 (*Riera, P., Barberá, P., Gómez, R. et al.*, 2013, *Anduiza, E., Gallego, A., & Muñoz, J. 2013)*.
+
+On trouve donc à travers ces deux exemples des arguments qui soutiennent que la corruption peut impacter positivement la participation électorale.
+
+Cependant, ces arguments restent minoritaires. Dans la majorité de la littérature, la perception de la corruption a un impact négatif sur la participation électorale (*Stockemer, D., LaMontagne, B., & Scruggs, L.* 2013 ; *Julie K. Faller,* 2015 ;  *Hooghe, M., Quintelier, E*, 2014). En effet, on remarque qu\'à travers des variables micro-économiques comme l\'idéologie, le niveau de connaissance en politique, ou encore le fait d\'être au chômage ; il est possible d\'étudier le comportement d\'un individu face à la corruption. Les conclusions, tirées de l\'article : \"*The electoral consequences of corruption scandals in Spain, Riera, P., Barberá, P., Gómez, R. et al., 2013*\" nous montrent que dans la majorité des cas, l\'effet de la corruption sur le vote, en plus d\'être faible, est relativement négatif. Les conclusions tirées sont que les individus vont porter plus d\'importance au programme du candidat, même si celui-ci est connu pour abus de pouvoir. On peut dire qu\'ils suivent avant tout leurs opinions politiques. Néanmoins, il existe aussi des individus qui, en voyant un tel système démocratique, n\'ont plus foi en celui-ci et décident donc de s\'abstenir du vote, dans ce cas, la corruption a un effet négatif sur la participation électorale.
+
+Enfin, à travers ces différents articles, on remarque deux approches méthodologiques différentes, une s\'appuyant plus sur des variables macroéconomiques (Aksel Sundström, Daniel Stockemer, 2015) et d\'autres sur des variables plus microéconomique, comme c\'est le cas pour l\'étude espagnole (Riera, P., Barberá, P., Gómez, R. et al., 2013).
+
+Pour conclure, on constate que la perception de la corruption a un effet modeste sur la participation électorale et que les facteurs testés ne sont pas suffisants pour expliquer le lien entre la corruption et la participation électorale. Afin de chercher des explications à comment la perception de la corruption impacte la participation électorale, les chercheurs ont essayé de trouver quelles sont les variables qui ont un rôle médiateur entre la corruption et la participation électorale, comme l\'idéologie et l\'éducation, qui viennent impacter la perception de la corruption.
+
+## [Nettoyage des données]{.underline} 
+
+Toutes mes données proviennent de la base de données suivante datant de 2016 et 2021: CSES, Comparative Study of Electoral System. 
+
+Cette base de données contient environ 22000 observations que j'ai décidé de filtrer. J'ai éliminé certains pays pour nous concentrer sur les pays d\'Europe.
+
+Ensuite, pour effectuer mes différentes régressions j'ai généré 3 nouvelles variables. Pour ce faire, j'ai transformé différentes variables catégoriques ( éducation ) ( perc_corruption ) en variables dichotomiques ( high_educ ) ( high_corrupt ) en séparant en deux groupes, prenant les valeurs suivantes : 1 pour un niveau élevé d\'éducation ou de corruption et 0 pour un niveau faible d\'éducation ou de corruption. 
+
+En ce qui concerne les variables comme le revenu et la performance du gouvernement ( perf_gouv ), je les aient changées en variables dichotomiques. 
+
+Pour la variable âge je n'ai pas eu besoin de la convertir en variable dichotomique car il s\'agit d\'une variable continue. 
+
+Cette base de données totalement filtrée contient donc environ 11000 observations dans les pays suivants : Allemagne, Grèce, Italie, Irlande, Autriche, Hongrie, Lituanie, Monténégro.
+
+## [Descriptions des différentes variables]{.underline} 
+
+**Part.electoral** : Participation électorale lors de la plus récente élection. Variable numérique et binaire :
+
+0 = l\'individu n\'a pas voté
+
+1 = l\'individu a voté
+
+**Perc_corruption** = Perception personnelle du niveau de la corruption. Variable numérique et binaire :
+
+0 = l\'individu croit qu\'il n\'y a presque pas de corruption
+
+1 = l\'individu croit qu\'il y a énormément de corruption
+
+**Age** : Age (en année) de l\'individu. Variable continue :
+
+**Perf.gov** : Perception personnelle de la performance gouvernementale. Variable numérique et catégorique :
+
+1 = la personne croit que le gouvernement a fait un très mauvais travail
+
+2 = la personne croit que le gouvernement a fait un mauvais travail
+
+3 = la personne croit que le gouvernement a fait un bon travail
+
+4 = la personne croit que le gouvernement a fait un excellent travail
+
+**Revenu** : Niveau de revenu de l\'individu. Variable numérique et catégorique:
+
+1 = Quintile de revenu le plus bas
+
+2 = Avant-dernier quintile de revenu
+
+3 = Quintile de revenu du milieu
+
+4 = Deuxième quintile de revenu le plus élevé
+
+5 = Quintile de revenu le plus élevé
+
+**High_educ :** Niveau d\'éducation de la personne. Variable numérique et binaire :
+
+0 = éducation secondaire ( sans université )
+
+1 = education à l'université
+
+## [Stratégie empirique]{.underline} 
+
+Dans une première partie, nous allons étudier l\'impact de la perception de la corruption sur la participation électorale en effectuant plusieurs régressions avec différentes variables de contrôles.
+
+[Premièrement]{.underline}, nous utiliserons un modèle de régression linéaire simple de la perception de la corruption sur la participation électorale comme suit afin d\'obtenir un premier coefficient pouvant expliquer un lien causale entre les 2 variables :
+
+### *Part.electoral = B0 + B1high_corrupt + Ui* 
+
+[Deuxièmement]{.underline}, nous utiliserons un modèle de régression linéaire multiple afin d\'ajouter des variables de contrôles à notre modèle simple, tel que l\'éducation, le revenu, l\'âge et la performance gouvernementale. Ces variables permettent d\'obtenir un coefficient de la perception de la corruption plus précis en réduisant le biais potentiel :
+
+### *Part.electoral = B0 + B1high_corrupt + B2high_educ + B3i.revenu + B4âge + B5i.perf.gov + Ui*
+
+Dans une deuxième partie, nous allons premièrement procéder à une étude d\'hétérogénéité de l\'éducation sur la perception de la corruption. Nous évaluerons l\'effet que l\'éducation pourrait avoir sur la perception de la corruption, à travers un modèle avec une variable d'interaction entre la perception de la corruption et l\'éducation afin de capter comment la perception de la corruption varie avec des variations dans le niveau d\'éducation. Il nous paraissait pertinent de créer une variable interagissant entre « high_corrupt » et « high_educ » -\> educ_corrupt.
+
+### *Part.electoral = B0 + B1high_corrupt + B2high_educ + B3i.revenu + B4âge + B5i.perf.gov + B6 educ_corrupt + Ui*
+
+## [Bibliographie]{.underline}
+
+[Riera, P., Barberá, P., Gómez, R. *et al.* The electoral consequences of corruption scandals in Spain. *Crime Law Soc Change* 60]{.underline}
+
+[Aksel Sundström, Daniel Stockemer, *Regional variation in voter turnout in Europe: The impact of corruption perceptions*, Electoral Studies, Volume 40, 2015,]{.underline}
+
+[Stockemer, D., LaMontagne, B., & Scruggs, L. (2013). Bribes and ballots: The impact of corruption on voter turnout in democracies. *International Political Science Review*, *34*(1), 74-90.]{.underline}
+
+[Julie K. Faller (2015) The system matters: corruption and vote choice in Uganda, Commonwealth & Comparative Politics]{.underline}
+
+[Hooghe, M., Quintelier, E. Political participation in European countries: The effect of authoritarian rule, corruption, lack of good governance and economic downturn ( 2014 )]{.underline}
+
+[Anduiza, E., Gallego, A., & Muñoz, J. (2013). Turning a Blind Eye: Experimental Evidence of Partisan Bias in Attitudes Toward Corruption. Comparative Political Studies, 46]{.underline}
+
+[Karahan, G.R., Coats, R.M. & Shughart, (2006). W.F. Corrupt political jurisdictions and voter participation. *Public Choice* 126]{.underline}
+
+[Inman, K., & Andrews, J. T. (2009). Corruption and political participation in Africa: Evidence from survey and experimental research. *Midwest Political Science Association, April*, 3-6.]{.underline}
+
+[Base de données : CSES, Comparative Study of Electoral Systems, Module 5, 2016-2021]{.underline}
