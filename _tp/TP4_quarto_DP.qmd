@@ -1,0 +1,53 @@
+---
+title: "TP4_FAS1001_DP"
+format: html
+editor: visual
+---
+
+## Introduction 
+
+Pour ce devoir, j'ai décidé de scrapper une page de Wikipédia contenant le classement des indices de corruption par pays au fil des années. À travers cette recherche, j'ai cherché à voir s'il y avait non seulement des disparités de niveau de corruption au sein des continents, mais aussi, afin de voir comment l'indice de corruption variait au fil du temps au sein d'un même continent.
+
+## Formatage et Nettoyage 
+
+Avant de commencer toute analyse, après avoir scrappé, j'ai du changer le format de ma base de donnée.
+
+En utilisant la fonction pivot longer, j'ai pu échanger les colonnes pour les lignes, ce qui rendait ensuite l'exploitation plus facile.
+
+Nous sommes donc passé de :
+
+![](images/Screenshot 2024-03-25 at 11.19.22.png)
+
+avant le changement de format, à :
+
+![](images/Screenshot 2024-03-25 at 11.22.23.png)
+
+Un tel format m'a permis de calculer les scores de corruption moyen par continent par année plus facilement.
+
+## Résultats et interprétation 
+
+Une fois les données nettoyées et prêtes à être exploitées, j'ai utilisé la librairie ggplot pour confectionner un graphique montrant les différents niveau de corruption par continent au fil des années. Les données que j'ai tirées sont les indices de corruption entre 2013 et 2023, calculé par l'ONG Transparency International.
+
+![](images/Screenshot 2024-03-25 at 11.57.57.png)
+
+Voici le graphique obtenu. La ligne horizontale noir représente la moyenne globale. Il est important de noter que plus l'indice est élevé, moins de corruption il y a, autrement dit, un score élevé est un signe qu'il y a peu de corruption, et l'inverse s'applique dans le cas opposé.
+
+On remarque tout d'abord que le niveau de corruption varie très peu, si l'on regarde sur une échelle de 10 ans, qui est plus significatif que d'une année à l'autre, le niveau de corruption reste plus ou moins constant. On peut remarquer une légère amélioration pour les continents se situant en dessous de la moyenne, et l'opposé pour les continents au dessous, on remarque en Europe et en Amérique du Nord une légère baisse du score.
+
+Toutefois, on remarque tout de même un assez gros fossé entre les pays occidentaux et le reste du monde, notamment avec le continent africain qui affiche la moyenne la plus basse durant les 10 dernières années.
+
+## Conclusion 
+
+Bien que les résultats de notre analyse mettent en évidence des tendances intéressantes dans les niveaux de corruption à travers les continents et au fil des années, il est important de considérer les implications éthiques de la recherche.
+
+Premièrement, le fait que le niveau de corruption varie peu au fil du temps soulève des questions sur l'efficacité des mesures de lutte contre la corruption dans de nombreux pays. Cette constance peut indiquer la persistance de problèmes systémiques et structurels qui contribuent à la corruption, nécessitant ainsi une action continue et ciblée pour y remédier.
+
+Deuxièmement, l'écart significatif entre les pays occidentaux et le reste du monde en termes de niveau de corruption peut être le reflet de déséquilibres de pouvoir économique, politique et social entre les nations, soulignant ainsi la nécessité d'une approche éthique et solidaire dans les efforts de lutte contre la corruption à l'échelle mondiale.
+
+Enfin, il est impératif de vérifier les conditions d'utilisation des données, de respecter les droits de propriété intellectuelle et de citer correctement toutes les sources utilisées dans nos recherches. Cela permet non seulement de garantir le respect des droits d'auteur et des politiques de citation, mais aussi de reconnaître le travail des chercheurs précédents.
+
+En conclusion, cette recherche met en lumière l'importance de mener des analyses éthiques et responsables sur des questions sensibles telles que la corruption. Il est essentiel d'adopter une approche réfléchie et éthique dans la collecte, l'analyse et l'interprétation des données, en tenant compte des implications sociales, éthiques, politiques et économiques de nos recherches.
+
+Source :
+
+Wikipédia : https://fr.wikipedia.org/wiki/Indice_de_perception_de_la_corruption
